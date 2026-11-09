@@ -62,7 +62,7 @@ export class VillageScene extends Phaser.Scene {
 
     // controles
     this.cursors = this.input.keyboard!.createCursorKeys();
-    this.wasd = this.input.keyboard!.addKeys('W,A,S,D,E') as typeof this.wasd;
+    this.wasd = this.input.keyboard!.addKeys({ w: 'W', a: 'A', s: 'S', d: 'D', e: 'E' }) as typeof this.wasd;
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (isUiOpen()) return;
