@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MedVila</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #2a1232; overflow: hidden; font-family: ui-monospace, Menlo, Consolas, monospace; }
+    #game { position: fixed; inset: 0; }
+    #game canvas { image-rendering: pixelated; }
+    #hud { position: fixed; top: env(safe-area-inset-top, 0); left: 0; padding: 8px 12px; color: #fff; font-size: 13px;
+           background: #0008; border-bottom-right-radius: 8px; pointer-events: none; z-index: 5; }
+    #ui { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: #000a; z-index: 10; padding: 12px; box-sizing: border-box; }
+    #ui.open { display: flex; }
+    .panel { background: #fff8e7; color: #2b2118; border: 4px solid #6b4423; border-radius: 6px; padding: 16px;
+             width: 100%; max-width: 440px; max-height: 90vh; overflow-y: auto; box-sizing: border-box; }
+    .panel h2 { margin: 0 0 8px; font-size: 18px; }
+    .tag { margin: 8px 0 2px; font-size: 11px; text-transform: uppercase; color: #8a5a2b; }
+    .log { background: #f0e2bf; padding: 8px; border-radius: 4px; font-size: 13px; }
+    .panel button { display: block; width: 100%; margin: 8px 0 0; padding: 12px; font: inherit; font-size: 14px; text-align: left;
+                    background: #fff; border: 2px solid #6b4423; border-radius: 4px; color: inherit; cursor: pointer; }
+    .panel button.primary { background: #6b4423; color: #fff; text-align: center; }
+    .panel button.ok { background: #bfe8b0; }
+    .panel button.bad { background: #f3b4ac; }
+  </style>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="hud"></div>
+  <div id="ui"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
