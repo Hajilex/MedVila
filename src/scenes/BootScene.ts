@@ -8,7 +8,7 @@ export class BootScene extends Phaser.Scene {
   }
 
   create() {
-    const g = this.make.graphics({ x: 0, y: 0, add: false });
+    const g = this.make.graphics({ x: 0, y: 0 }, false);
 
     // grama
     g.fillStyle(0x5aa04b).fillRect(0, 0, 16, 16);
